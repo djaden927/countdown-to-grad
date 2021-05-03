@@ -28,3 +28,31 @@ if (timeleft < 0) {
     // document.getElementById("seconds").innerHTML = ""
     document.getElementById("end").innerHTML = "TIME UP!!";
 }
+
+
+// progress bar
+var box = document.createElement('div');
+
+box.className = 'complete';
+document.getElementById('calendarBoxContainer').appendChild(box);
+
+for (var i = 0; i < 172; i++){
+    var box = document.createElement('div');
+
+if(i < 172 - days){
+    box.className = 'complete';
+    document.getElementById('calendarBoxContainer').appendChild(box);
+
+}
+else{
+    box.className = 'incomplete';
+    document.getElementById('calendarBoxContainer').appendChild(box);
+}
+}
+
+// progress percentage
+
+let percentage = (172 - days) /172 * 100;
+document.getElementById('percent').innerHTML = `You are ${percentage.toFixed(2)}% of the way finished with Lambda School!`
+console.log(percentage.toFixed(2));
+

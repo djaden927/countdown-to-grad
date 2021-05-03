@@ -67,12 +67,12 @@ body{
 /* container */
 
 .container{
-    width: 100%;
+    max-width: 100%;
 }
 
 /* title */
 h1{
-    font-size: 15rem;
+    font-size: 10rem;
     text-align: center;
     margin: 5% 0 7% 0;
     background-color: rgb(46, 46, 46);
@@ -82,12 +82,26 @@ h1{
     color: #85bb65;
 } */
 
+.percentProgress{
+    display:flex;
+    justify-content: center;
+    align-items:baseline;
+}
+
+.percentProgress p{
+    margin: 0 auto;
+    background-color: rgb(46, 46, 46);
+    font-size: 4rem;
+    margin-top: 2%;
+    color: rgb(8, 153, 45);
+}
+
 /* boxes */
 .countdownBoxes{
     display:flex;
     width:100%;
     justify-content: space-evenly;
-    height: 200px;
+    /* height: 200px; */
 }
 
 .countdownBoxes div{
@@ -106,5 +120,26 @@ h1{
     font-size: 7rem;
     color:white;
     margin-top: 4%;
+    margin-bottom: 0;
+}
 
+
+.calendarBox{
+    margin-top:5%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+.incomplete, .complete{
+    background-color: red;
+    width: .578%;
+    height: 3vh;
+    margin: 1.5px 0;
+}
+
+.complete{
+    background-color: green;
+    z-index: 999;
+    transition: 1.5s;
+    transition-delay: 1s;
 }
